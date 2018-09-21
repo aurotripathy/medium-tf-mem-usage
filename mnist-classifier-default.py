@@ -24,7 +24,7 @@ output = Dense(10, activation='softmax')(x)
 model = Model(input, output)
 
 print(model.summary())
-model.compile(Adam(lr=0.001), loss='categorical_crossentropy',
+model.compile(optimizer=Adam(lr=0.001), loss='categorical_crossentropy',
               metrics=['accuracy'])
 model.fit(train_data, train_labels, batch_size=64, epochs=5,
           validation_data=(test_data, test_labels))
