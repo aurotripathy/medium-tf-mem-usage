@@ -42,7 +42,7 @@ class MyAdamOptimizer(tf.train.AdamOptimizer):
                           var_list=None,
                           gate_gradients=tf.train.Optimizer.GATE_OP,
                           aggregation_method=None,
-                          colocate_gradients_with_ops=True,
+                          colocate_gradients_with_ops=False,
                           grad_loss=None):
         return super(MyAdamOptimizer, self).compute_gradients(
             loss,
@@ -58,7 +58,7 @@ class MyAdamOptimizer(tf.train.AdamOptimizer):
             var_list=None,
             gate_gradients=tf.train.Optimizer.GATE_OP,
             aggregation_method=None,
-            colocate_gradients_with_ops=True,
+            colocate_gradients_with_ops=False,
             name=None,
             grad_loss=None):
         return super(MyAdamOptimizer, self).minimize(
