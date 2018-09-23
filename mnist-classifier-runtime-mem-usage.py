@@ -1,3 +1,8 @@
+"""
+Further developed from code available here
+http://docs.seldon.io/tensorflow-deep-mnist-example.html
+"""
+
 import tensorflow as tf
 from tensorflow.contrib.memory_stats import MaxBytesInUse
 from tensorflow.examples.tutorials.mnist import input_data
